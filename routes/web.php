@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderDetailsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('admin')->group(function() {
+    Route::controller(OrderDetailsController::class)->group(function() {
+        Route::get('/orders', 'index');
+        Route::post('/orders', 'update');
+        Route::put('/orders', 'add');
+    });
 });
