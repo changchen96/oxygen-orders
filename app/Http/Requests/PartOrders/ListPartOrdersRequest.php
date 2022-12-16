@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\PartOrders;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PartOrdersController extends FormRequest
+class ListPartOrdersRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
