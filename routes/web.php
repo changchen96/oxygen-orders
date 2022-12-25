@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\OrderDetailsController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('admin')->group(function() {
-    Route::controller(OrderDetailsController::class)->group(function() {
+    Route::controller(OrderController::class)->group(function() {
         Route::get('/orders', 'index');
         Route::post('/orders', 'update');
         Route::put('/orders', 'add');
