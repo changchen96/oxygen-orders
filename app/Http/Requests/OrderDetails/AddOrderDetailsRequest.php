@@ -17,7 +17,7 @@ class AddOrderDetailsRequest extends AbstractRequest
             'data' => 'required|array',
             'data.client_name' => 'required|string',
             'data.order_date' => 'required|date',
-            'data.delivery_location' => 'required|string',
+            'data.delivery_location_id' => 'required|numeric',
             'data.items' => 'required|array',
             'data.items.*.product_id' => 'required|numeric',
             'data.items.*.quantity' => 'required|numeric'
