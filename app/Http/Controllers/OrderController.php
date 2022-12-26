@@ -60,8 +60,8 @@ class OrderController extends Controller
            return response()->json([
             'data' => [
                 'message' => $e->getMessage()
-            ]
-        ], 500);
+                ]
+            ], 500);
         }
     }
 

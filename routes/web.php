@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderDetailsItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +24,9 @@ Route::prefix('admin')->group(function() {
         Route::get('/orders', 'index');
         Route::post('/orders', 'update');
         Route::put('/orders', 'add');
+    });
+
+    Route::controller(OrderDetailsItemController::class)->group(function() {
+        Route::get('/order_details', 'index');
     });
 });

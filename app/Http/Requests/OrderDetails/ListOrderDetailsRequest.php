@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\OrderDetails;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\AbstractRequest;
 
-class ListOrderDetailsRequest extends FormRequest
+class ListOrderDetailsRequest extends AbstractRequest
 {
     /**
      * Get the validation rules that apply to the request.
